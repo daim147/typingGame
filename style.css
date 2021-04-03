@@ -42,6 +42,7 @@ h1 {
     color: white;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 span {
@@ -89,6 +90,7 @@ textarea::placeholder {
     justify-content: center;
     align-items: center;
     transform: rotatez(0deg) ;
+    text-align: center;
     background-color: rgb(31, 37, 137);
     box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.7);
     cursor: pointer;
@@ -211,7 +213,7 @@ textarea::placeholder {
     .time, .start {
         width: 7rem;
         height: 4rem;
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
     .start{
         width: 7rem;
