@@ -27,6 +27,7 @@ h1 {
     color: rgb(31, 37, 137);
     transform: rotatez(0deg) ;
     animation: rotations 4s linear infinite;
+    z-index; 20;
 }
 
 
@@ -95,6 +96,7 @@ textarea::placeholder {
     color: white;
     transition: all 0.4s linear;
     animation: rotations 4s 2s linear infinite;
+    z-index: 10;
 
 }
 
@@ -198,6 +200,24 @@ textarea::placeholder {
     body {
         min-height: 200vh;
     }
+    .pop-up{
+        width: 80%;
+        height: 60%;
+    }
+    .container{
+        line-height: 30px;
+        padding: 5rem 1rem;
+    }
+    .time, .start {
+        width: 7rem;
+        height: 4rem;
+        font-size: 1.1rem;
+    }
+    .start{
+        width: 7rem;
+        
+    }
+    
 }
 
 
