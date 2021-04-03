@@ -1,0 +1,247 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+}
+
+body {
+    background: linear-gradient(rgb(102, 229, 184),
+            rgb(92, 175, 162),
+            rgb(77, 123, 139),
+            rgb(57, 75, 116),
+            rgb(30, 29, 93));
+    width: 100%;
+    min-height: 200vh;
+    position: relative;
+    overflow-x: hidden;
+    padding: 1.5rem 0 0 0;
+}
+
+h1 {
+    font-size: 4rem;
+    text-align: center;
+    font-family: fantasy;
+    text-shadow: 0px 6px 6px rgba(0, 0, 0, 0.6);
+    color: rgb(31, 37, 137);
+    transform: rotatez(0deg) ;
+    animation: rotations 4s linear infinite;
+}
+
+
+
+.container {
+    width: 100%;
+    height: auto;
+    padding: 5rem 2rem 10rem 2rem;
+    text-align: justify;
+    line-height: 40px;
+    font-size: 2rem;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+span {
+    margin: 0 0.4rem;
+    font-weight: bold;
+    text-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.7);
+    transform: rotatez(0deg);
+    animation: rotations2 4s linear infinite;
+
+}
+
+textarea {
+    min-width: 100%;
+    max-height: 500px;
+    background: #d5ebd1;
+    min-height: 200px;
+    text-shadow: 0.156rem 0.156rem 0.3rem rgba(0, 0, 0, 0.4);
+    outline: none;
+    font-size: 1.7rem;
+    position: fixed;
+    bottom: 0;
+    padding: 2rem;
+    color: #282442;
+    font-weight: bold;
+}
+
+textarea::placeholder {
+    color: #282442;
+    font-weight: bold;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.time, .start {
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 5px ;
+    width: 11rem;
+    height: 5rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotatez(0deg) ;
+    background-color: rgb(31, 37, 137);
+    box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
+    color: white;
+    transition: all 0.4s linear;
+    animation: rotations 4s 2s linear infinite;
+
+}
+
+.time:hover, .start:hover {
+    box-shadow: inset 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.7);
+    color: rgb(31, 37, 137);
+    background-color: transparent;
+}
+.start{
+    left: 5px;
+    width: 10rem;
+}
+
+
+
+.pop-up {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    width: 50rem;
+    height: 20rem;
+    transform: translate(-50%, -50%) scale(0);
+    background: linear-gradient(rgb(126, 212, 185),
+            rgb(125, 173, 183),
+            rgb(119, 135, 181),
+            rgb(108, 96, 177),
+            rgb(91, 56, 173));
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    transition: all, 0.5s ease-in;
+    border-radius: 30px;
+    box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.4);
+}
+
+.pop-up h2 {
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    text-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.7);
+}
+
+.pop-up button {
+    background: linear-gradient(rgb(29, 158, 228),
+            rgb(40, 124, 204),
+            rgb(40, 91, 180),
+            rgb(34, 59, 156),
+            rgb(20, 25, 133));
+    box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.4);
+    text-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 2rem;
+    padding: 1rem 1.6rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.pop-up button:active {
+    transform: translateY(2px);
+}
+
+.container.add {
+    opacity: 0;
+}
+
+.container.add +textarea+.pop-up {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.red {
+    color: red;
+    transition: top 0.5s ease-in-out;
+}
+
+.gray {
+    color: rgb(197, 179, 159);
+    position: relative;
+    top: 0px;
+    transition: top 0.5s ease-in-out;
+}
+
+.green {
+    color: rgb(170, 215, 88);
+    position: relative;
+    top: -30px;
+    transition: top 0.5s ease-in-out;
+}
+
+.white {
+    color: white;
+    transition: top 0.5s ease-in-out;
+}
+
+@media (max-width: 800px) {
+    html {
+        font-size: 70%;
+    }
+
+    body {
+        min-height: 200vh;
+    }
+}
+
+
+@keyframes rotations {
+    0%{
+        transform: rotatez(0deg) ;
+    
+    }
+    25%{
+        transform: rotatez(20deg) ;
+    
+    }
+    50%{
+        transform: rotatez(0deg);
+    
+    }
+    75%{
+        transform: rotatez(-20deg) ;
+    
+    }
+    100%{
+        transform: rotatez(0deg) ;
+    
+    }
+    }
+@keyframes rotations2 {
+    0%{
+        transform: rotatez(0deg)  ;
+    
+    }
+    25%{
+        transform: rotatez(5deg);
+    
+    }
+    50%{
+        transform: rotatez(0deg);
+    
+    }
+    75%{
+        transform: rotatez(-5deg);
+    
+    }
+    100%{
+        transform: rotatez(0deg);
+    
+    }
+    }
